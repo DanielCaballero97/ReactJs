@@ -1,5 +1,7 @@
 
-import Header from "./Header"
+import Header from "./componentes/Header"
+import Main from "./componentes/Main"
+import Footer from "./componentes/Footer"
 
 /*
 App es un componente
@@ -15,13 +17,8 @@ Tipos de Componentes :
     return (
     <>
       <Header/>
-      <main>
-        <h2>Home</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere natus esse numquam nihil dignissimos eligendi, vel saepe pariatur aut voluptatum, ut excepturi eius doloremque exercitationem dolores cumque? Odit, saepe tempore?</p>
-      </main>
-      <footer>
-        <p>Copyright &copy; Pepito</p>
-      </footer>
+      <Main/>
+      <Footer/>
     </>
     )
   }
