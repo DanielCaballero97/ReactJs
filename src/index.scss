@@ -13,3 +13,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.holi{
+  background-color: #242424;
+  color: #808080d6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Nav{
+
+  &Bar{
+  
+    &Header{
+    padding: 20px;
+    background-color: bisque;
+    }
+  }
+
+  &Container{
+    background-color:rgba(41, 29, 14, 0.679);
+  }
+}

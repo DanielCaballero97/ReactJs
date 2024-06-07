@@ -2,12 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from './CartWidget';
 
 function NB() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">Tienda del Enano Codicioso</Navbar.Brand>
+    <Navbar expand="lg" className="NavBarHeader">
+      <Container className='NavContainer'>
+        <Navbar.Brand href="#home" className='NavBarBrand'>Tienda del Enano Codicioso</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -24,6 +25,7 @@ function NB() {
                 Algo
               </NavDropdown.Item>
             </NavDropdown>
+            <CartWidget/>
           </Nav>
         </Navbar.Collapse>
       </Container>
