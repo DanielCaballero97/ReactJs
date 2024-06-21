@@ -14,7 +14,7 @@ function CartWidget(){
                     <Image
                         src="/carrito.jpg" 
                         rounded
-                        alt="carrito"
+                        alt="carritoo"
                         width="30px"
                         />
                 </Col>
