@@ -28,12 +28,35 @@
   &Bar{
   
     &Header{
-    padding: 20px;
     background-color: bisque;
     }
   }
 
   &Container{
+    display: flex;
+    flex-direction: row;
     background-color:rgba(41, 29, 14, 0.679);
+
+    &Collapse{
+      display: flex;
+      align-items: center;
+
+    }
+  }
+
+
+}
+
+.gridProductos{
+  gap: 10px;
+}
+
+.cardProducto{
+  background-color: #4b4a4a;
+  padding: 20px;
+  & img{
+    width: 100%;
+    height: 50%;
+    padding: 5px;
   }
 }

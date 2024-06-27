@@ -7,7 +7,7 @@ import { useState } from "react"
 function ProductosContainer(){
 
     const [productos, setProductos] = useState([])
-    const [pagina, setPagina] = useState(1)
+    const [mostrar, setMostrar] = useState(true)
 
     useEffect(() => {
 
@@ -21,25 +21,27 @@ function ProductosContainer(){
 
     },[])
 
-    const cambiarPaginaUno = () => {
-        setPagina(1)
-      }
-    const cambiarPaginaDos = () => {
-        setPagina(2)
-      }
-    const cambiarPaginaTres = () => {
-        setPagina(3)
+
+    const mostrarProductos = () => {
+        setMostrar(!mostrar)
       }
 
 
-    return(
-        <div>
-            <Productos productos={productos}/>
-            <button onClick={cambiarPaginaUno}>Pagina 1</button>
-            <button onClick={cambiarPaginaDos}>Pagina 2</button>
-            <button onClick={cambiarPaginaTres}>Pagina 3</button>
-     </div>
-    )
+
+      if (mostrar) {
+        return (
+          <div>
+            <button onClick={mostrarProductos}>mostrar productos</button>
+            <Productos productos={productos} />
+          </div>
+        )
+      } else {
+        return (
+          <div>
+            <button onClick={mostrarProductos}>mostrar productos</button>
+          </div>
+        )
+      }
 }
 
 export default ProductosContainer

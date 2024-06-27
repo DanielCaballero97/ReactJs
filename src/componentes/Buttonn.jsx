@@ -1,28 +1,56 @@
 import { useState } from "react"
+import { useDesktop } from "../utils"
 
 
-function Buttonn(props){
 
-   // const arrayDeValores = useState("valor inicial")
-   // const miEstado = arrayDeValores[0]
-   // const setMiEstado = arrayDeValores[1]
-    const [miEstado , setMiEstado] = useState("valor inicial")
 
-    //useEffect(function,array de dependencia)
-    /* 
-    useEffect(() => {
-        console.log("pedido a la api de ML, me traigo 1000 productos")
-    },[]) 
-    */
+
+function Buttonn({ children }){
+
+    const [estado , setEstado] = useState(false)
+
+    const isDesktop = useDesktop()
 
     const hacerClick = () => {
-        console.log("click")
-        setMiEstado("nuevo valor")
+        setEstado(!estado)
     }
 
+
+
+
+
+
+
+    if (estado === false) {
+        return (
+            <div>
+                <button onClick={hacerClick} className="btn bg-white border-rounded">{children}</button>
+            </div>
+    )
+  }
+
+
+  if (isDesktop) {
     return (
-        <button className="btn text-bg-secondary " onClick={hacerClick}>{miEstado}</button>
+    <div>
+        <button onClick={hacerClick} className="btn bg-white border-rounded">{children}</button>
+        <div className="">
+            soy un popup
+        </div>
+    </div>
     )
 }
+
+return (
+    <div> 
+        <button onClick={hacerClick} className="btn bg-white border-rounded">{children}</button>
+        <div className="">
+            soy un popup
+         </div>
+  </div>
+)
+
+  }
+
 
 export default Buttonn

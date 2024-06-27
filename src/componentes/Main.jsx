@@ -1,5 +1,4 @@
 import ItemListContainer from "./ItemListContainer"
-import Buttonn from "./Buttonn"
 import ProductosContainer from "./ProductosContainer"
 
 function Main () {
@@ -9,8 +8,6 @@ function Main () {
 
             <h3>Inventario</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere natus esse numquam nihil dignissimos eligendi, vel saepe pariatur aut voluptatum, ut excepturi eius doloremque exercitationem dolores cumque? Odit, saepe tempore?</p>
-            <Buttonn texto="holi"></Buttonn>
-
 
             <ProductosContainer/>
 

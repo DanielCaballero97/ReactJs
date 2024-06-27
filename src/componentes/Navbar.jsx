@@ -10,7 +10,7 @@ function NB() {
       <Container className='NavContainer'>
         <Navbar.Brand href="#home" className='NavBarBrand'>Tienda del Enano Codicioso</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className='NavContainerCollapse'>
           <Nav className="me-auto">
             <Nav.Link href="#home">Inicio</Nav.Link>
             <Nav.Link href="#link">Descuentos</Nav.Link>
