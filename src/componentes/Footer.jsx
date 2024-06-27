@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <footer>
+        <footer className="text-bg-secondary">
         <p>Copyright &copy; Pepito</p>
       </footer>
     )
